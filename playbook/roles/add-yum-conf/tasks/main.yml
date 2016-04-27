@@ -1,0 +1,2 @@
+- name: setting proxy
+  raw: "echo 'proxy=http://192.168.1.96:8080' >> /etc/yum.conf"

@@ -1,0 +1,8 @@
+#- name: config grub for disableipv6,change nic-name(ethX)
+#  shell: grep net.ifnames /etc/default/grub || sed -i'.default' -e '/^GRUB_CMDLINE_LINUX/s/\"$/ ipv6.disable=1 net.ifnames=0 biosdevname=0\"/g' /etc/default/grub
+
+- name: configure grub
+  template: src=grub dest=/etc/default/grub backup=yes
+
+- name: Reflected setting
+  command: grub2-mkconfig -o /boot/grub2/grub.cfg

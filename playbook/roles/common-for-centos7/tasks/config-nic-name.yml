@@ -1,0 +1,5 @@
+- name: be sure ipv6 disabled and change nic-name 
+  command: grep net.ifnames /etc/default/grub || sed -i".default" -e '/^GRUB_CMDLINE_LINUX/s/\"$/ ipv6.disable=1 net.ifnames=0 biosdevname=0\"/g' /etc/default/grub
+
+- name: Reflected setting
+  command: grub2-mkconfig -o /boot/grub2/grub.cfg

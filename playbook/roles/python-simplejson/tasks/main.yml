@@ -1,0 +1,14 @@
+#- name: setting proxy
+#  raw: "export http_proxy='http://192.168.1.96:8080'"
+
+- name: setting proxy
+  raw: "echo 'proxy=http://192.168.1.96:8080' >> /etc/yum.conf"
+
+- name: Install pyrhon-simplejson
+  raw: "yum install -y python-simplejson"
+
+#- name: Delete proxy setting
+#  raw: "sed -i -e '$d' /etc/yum.conf"
+
+#- name: Delete proxy setting
+#  raw: "sed -i '/8080/d' /etc/yum.conf"

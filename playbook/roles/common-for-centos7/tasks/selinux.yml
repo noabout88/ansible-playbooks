@@ -1,0 +1,12 @@
+- name: Install libselinux-python
+  yum: name=libselinux-python state=present
+
+- name: Check status of selinux
+  shell: getenforce
+
+- name: Disable selinux
+  selinux: state=disabled
+
+#- name: setting /etc/selinux/config from template file
+#  tags: selinux
+#  template: src=config dest=/etc/selinux/config backup=yes

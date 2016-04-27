@@ -1,0 +1,2 @@
+#environment:
+# http_proxy: http://172.16.0.1:8080

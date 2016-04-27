@@ -1,0 +1,29 @@
+- name: be sure installed rdo-release.rpm
+  yum: name=https://www.rdoproject.org/repos/rdo-release.rpm state=present
+
+- name: be sure installed openstack-packstack
+  yum: name=openstack-packstack
+
+#- name: setting http_proxy
+#  shell: export http_proxy="http://192.168.1.96:8080/"
+
+#- name: setting https_proxy
+#  shell: export https_proxy="http://192.168.1.96:8080/"
+
+#- name: setting no_proxy
+#  shell: export no_proxy="localhost,127.0.0.1"
+
+- name: be sure wgetrc
+  template: src={{ item }} dest=/etc/ backup=yes
+  with_items:
+        - wgetrc
+
+#- name: be sure .bash_profile for http_proxy
+#  template: src={{ item }} dest=/root/ backup=yes
+#  with_items:
+#        - .bash_profile
+
+- name: be sure hosts
+  template: src={{ item }} dest=/etc/ backup=yes
+  with_items:
+        - hosts

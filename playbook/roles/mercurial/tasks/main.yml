@@ -1,0 +1,23 @@
+- name: yum clean
+  shell: yum clean all
+
+#- name: upgrade all packages
+#  yum: name=* state=latest
+
+#- name: yum update by shell
+#  shell: "yum -y update"
+
+- name: install the 'Development tools' package group
+  yum: name="@Development tools" state=present
+
+- name: install the 'Japanese Support' package group
+  yum: name="@Japanese Support" state=present
+
+- name: be sure installed iozone 
+  yum: name=http://pkgs.repoforge.org/iozone/iozone-3.424-2.el6.rf.x86_64.rpm state=present
+
+- name: be sure installd epel-relese
+  yum: name=epel-release state=present
+
+- name: be sure installed fio
+  yum: name=fio state=present

@@ -1,0 +1,4 @@
+- hosts: 
+     - edpc
+  roles: 
+     - hp-tools

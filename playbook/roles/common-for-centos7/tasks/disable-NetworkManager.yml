@@ -1,0 +1,7 @@
+- name: be sure disable NetworkManager
+  tags: disable-firewalld
+  command: systemctl disable NetworkManager.service
+
+- name: be sure stop NetworkManager
+  tags: stop-firewalld
+  command: systemctl stop NetworkManager.service

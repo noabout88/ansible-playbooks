@@ -1,0 +1,5 @@
+- name: be sure epel-repo rpm is installed for RHEL7
+  tags: epel
+  yum:  pkg=epel-release
+  when: ansible_os_family == 'RedHat' and ansible_distribution_major_version|int == 7
+  ignore_errors: yes

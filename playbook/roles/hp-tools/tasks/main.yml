@@ -1,0 +1,40 @@
+- name: yum clean
+  shell: yum clean all
+
+- name: be sure redhat-lsb-core is installed
+  yum: pkg=redhat-lsb-core state=installed
+  ignore_errors: True
+
+- name: be sure hpssacli is installed
+  yum: pkg=http://downloads.linux.hpe.com/SDR/repo/mcp/CentOS/7/x86_64/current/hpssacli-2.20-11.0.x86_64.rpm state=installed
+
+#- name: setting /tmp/add_repo.sh from template file
+#  template: src=add_repo.sh dest=/tmp/add_repo.sh backup=no
+
+#- name: download add_repo.sh
+#  get_url: url="http://downloads.linux.hp.com/SDR/add_repo.sh" dest=/tmp use_proxy=yes force=yes
+#  environment:
+#        http_proxy: http://172.16.0.1:8080
+#        https_proxy: http://172.16.0.1:8080
+
+#- name: download add_repo.sh
+#  command: wget http://downloads.linux.hp.com/SDR/add_repo.sh -P /tmp
+
+#- name: chmod add_repo.sh
+#  file: path=/tmp/add_repo.sh state=file mode=0755
+
+#- name: run add_repo.sh
+#  command: /tmp/add_repo.sh mcp
+
+#- name: be sure hp-tools is installed
+#  yum: pkg={{ item }} state=installed
+#  with_items:
+#      - hp-ams
+#      - hp-health
+#      - hp-smh-templates
+#      - hp-snmp-agents
+#      - hpdiags
+#      - hponcfg
+#      - hpsmh
+#      - hpssa
+#      - hpssacli

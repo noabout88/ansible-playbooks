@@ -1,0 +1,9 @@
+- include: common-package.yml
+- include: epel.yml
+- include: chrony.yml
+#- include: config-grub.yml
+- include: disable-firewalld.yml 
+- include: selinux.yml
+#- include: disable-NetworkManager.yml
+#- include: yum-update.yml
+#- include: reboot-os.yml

@@ -1,0 +1,9 @@
+- hosts: 
+#    - dev1
+#    - dev5
+#    - mercurial 
+    - edpc 
+#    - st-edpc 
+  gather_facts: no
+  roles: 
+    - add-yum-conf

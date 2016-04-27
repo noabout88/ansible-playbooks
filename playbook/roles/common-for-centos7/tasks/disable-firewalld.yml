@@ -1,0 +1,7 @@
+- name: be sure disable firewalld
+  tags: disable-firewalld
+  command: systemctl disable firewalld.service
+
+- name: be sure stop firewalld
+  tags: stop-firewalld
+  command: systemctl stop firewalld.service

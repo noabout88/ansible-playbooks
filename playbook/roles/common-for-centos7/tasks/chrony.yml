@@ -1,0 +1,17 @@
+- name: be sure chrony is installed
+  tags: chrony
+  yum: pkg=chrony state=installed
+  ignore_errors: yes
+
+- name: setting /etc/chrony.conf from template file
+  tags: chrony
+  template: src=chrony.conf dest=/etc/chrony.conf backup=yes
+
+- name: service chronyd start
+  tags: chrony
+  command: systemctl start chronyd
+
+- name: service chronyd enable
+  tags: chrony
+  command: systemctl enable chronyd
+

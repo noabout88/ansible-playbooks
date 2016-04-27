@@ -1,0 +1,2 @@
+- name: Delete proxy setting
+  raw: "sed -i '/8080/d' /etc/yum.conf"

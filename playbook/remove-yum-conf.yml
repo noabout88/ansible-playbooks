@@ -1,0 +1,7 @@
+- hosts: 
+#    - dev1
+#    - dev5
+#    - mercurial 
+    - edpc
+  roles: 
+    - remove-yum-conf

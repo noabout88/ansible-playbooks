@@ -1,0 +1,23 @@
+- name: yum clean all before install
+  shell: yum clean all
+
+- name: be sure common packages is installed
+  tags: common-package
+  yum: pkg={{ item }} state=installed
+  with_items:
+    - bash-completion
+    - vim
+    - dstat
+    - iotop
+    - iptraf-ng
+    - net-snmp
+    - sysstat
+    - wget
+    - nfs-utils
+    - bind-utils
+
+- name: be sure rpcbind is enabled
+  service: name="rpcbind" enabled=yes
+
+- name: service rpcbind start
+  command: systemctl start rpcbind
