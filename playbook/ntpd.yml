@@ -1,6 +1,5 @@
 - hosts: 
-    - dev1
-#    - dev5
+    - hogehoge
   gather_facts: no
   roles: 
     - ntpd

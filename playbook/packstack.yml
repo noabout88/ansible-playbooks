@@ -1,6 +1,4 @@
 - hosts: 
-#     - edpc
-#     - st-edpc
      - openstack-mitaka-allinone
   roles: 
      - packstack

@@ -1,7 +1,4 @@
 - hosts: 
-#    - dev1
-#    - dev5
-#    mercurial
-     - st-edpc
+     - hogehoge
   roles: 
     - open-vm-tools
