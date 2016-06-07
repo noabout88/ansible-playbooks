@@ -1,0 +1,10 @@
+- name: ntpd stop
+  raw: "service ntpd stop"
+#  service: name="ntpd" state=restarted
+
+- name: ntpdate 
+  raw: "ntpdate 172.16.0.1"
+
+- name: ntpd start
+  raw: "service ntpd start"
+

@@ -2,7 +2,9 @@
 #    - dev1
 #    - dev5
 #    - mercurial
-     - edpc
-#     - st-edpc
+#    - edpc
+    - st-edpc
+#    - management
+#    - openstack-mitaka-allinone
   roles: 
     - common-for-centos7
