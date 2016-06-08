@@ -1,8 +1,0 @@
-127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
-::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-172.16.0.31 edpc-opsn01
-172.16.0.32 edpc-opsn02
-172.16.0.33 edpc-opsn03
-172.16.0.34 edpc-opsn04
-172.16.0.35 edpc-opsn05
-172.16.0.36 edpc-opsn06
