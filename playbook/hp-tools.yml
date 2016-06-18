@@ -1,4 +1,4 @@
 - hosts: 
-     - hogehoge
+     - openstack-mitaka-allinone
   roles: 
      - hp-tools

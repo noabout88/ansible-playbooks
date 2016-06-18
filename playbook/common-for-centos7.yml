@@ -1,4 +1,5 @@
 - hosts: 
-    - openstack-mitaka-allinone
+#    - openstack-mitaka-allinone
+    - opsn
   roles: 
     - common-for-centos7
